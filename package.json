@@ -9,7 +9,8 @@
     "client": "cd client && concurrently \"npm run start\" \"npm run storybook\"",
     "dev": "concurrently \"nodemon server.js\" \"npm run client\"",
     "build": "cd client && concurrently \"npm run build\" \"npm run build-storybook\"",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "cd client && npm install"
   },
   "repository": {
     "type": "git",

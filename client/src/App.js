@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import GlobalStyle from "./GlobalStyles";
+import Overwatch from "./pages/overwatch";
+import Tank from "./pages/Tank";
+import DPS from "./pages/DPS";
+import Support from "./pages/Support";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <GlobalStyle />
+      <Switch>
+        <Route path="/overwatch/tank">
+          <Tank />
+        </Route>
+        <Route path="/overwatch/dps">
+          <DPS />
+        </Route>
+        <Route path="/overwatch/support">
+          <Support />
+        </Route>
+        <Route path="/overwatch">
+          <Overwatch />
+        </Route>
+        <Router path="/">
+          <div>
+            <Link to="/overwatch">Overwatch</Link>
+          </div>
+        </Router>
+      </Switch>
+    </Router>
   );
 }
 

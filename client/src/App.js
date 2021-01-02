@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyle from "./GlobalStyles";
-import Overwatch from "./pages/Overwatch";
+import Overwatch from "./pages/Menu";
 import Hero from "./pages/Hero";
 
 function App() {

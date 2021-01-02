@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && concurrently \"npm run start\" \"npm run storybook\"",
     "dev": "concurrently \"nodemon server.js\" \"npm run client\"",
-    "build": "cd client && concurrently \"npm run build\" \"npm run build-storybook\"",
+    "build": "cd client && concurrently \"npm run build\"",
     "start": "node server.js",
     "postinstall": "cd client && npm install"
   },

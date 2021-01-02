@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyle from "./GlobalStyles";
 import Overwatch from "./pages/overwatch";
 import Tank from "./pages/Tank";
@@ -10,23 +10,18 @@ function App() {
     <Router>
       <GlobalStyle />
       <Switch>
-        <Route path="/overwatch/tank">
+        <Route path="/tank">
           <Tank />
         </Route>
-        <Route path="/overwatch/dps">
+        <Route path="/dps">
           <DPS />
         </Route>
-        <Route path="/overwatch/support">
+        <Route path="/support">
           <Support />
         </Route>
-        <Route path="/overwatch">
+        <Route path="/">
           <Overwatch />
         </Route>
-        <Router path="/">
-          <div>
-            <Link to="/overwatch">Overwatch</Link>
-          </div>
-        </Router>
       </Switch>
     </Router>
   );

@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components/macro";
 const GlobalStyle = createGlobalStyle` 
 body {
     font-family: "KOverwatch", sans-serif;
-    background: grey;
+    background: white;
     margin: 0;
     padding: 0;
 }

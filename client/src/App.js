@@ -1,23 +1,15 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyle from "./GlobalStyles";
-import Overwatch from "./pages/overwatch";
-import Tank from "./pages/Tank";
-import DPS from "./pages/DPS";
-import Support from "./pages/Support";
+import Overwatch from "./pages/Overwatch";
+import Hero from "./pages/Hero";
 
 function App() {
   return (
     <Router>
       <GlobalStyle />
       <Switch>
-        <Route path="/tank">
-          <Tank />
-        </Route>
-        <Route path="/dps">
-          <DPS />
-        </Route>
-        <Route path="/support">
-          <Support />
+        <Route path="/:role">
+          <Hero />
         </Route>
         <Route path="/">
           <Overwatch />

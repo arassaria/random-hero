@@ -15,6 +15,8 @@ html {
 
 a {
     text-decoration: none;
+    color: blue;
+    font-size: 2rem;
 }
 `;
 export default GlobalStyle;

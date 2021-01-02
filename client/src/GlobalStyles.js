@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components/macro";
 
 const GlobalStyle = createGlobalStyle` 
 body {
-    font-family: sans-serif;
+    font-family: "KOverwatch", sans-serif;
     background: grey;
     margin: 0;
     padding: 0;
@@ -11,6 +11,10 @@ body {
 html {
     margin: 0;
     padding: 0;
+}
+
+a {
+    text-decoration: none;
 }
 `;
 export default GlobalStyle;
